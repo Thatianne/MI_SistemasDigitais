@@ -41,3 +41,4 @@
 		movia r9, resultado
 		stw r8, 0(r9)
 
+
