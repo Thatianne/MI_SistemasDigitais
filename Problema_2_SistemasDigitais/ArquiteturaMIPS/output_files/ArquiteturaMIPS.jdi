@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="a35989a2b71efa234aa5"/>
+    <hash md5_digest_80b="b791489e1d6645be3acf"/>
   </project>
   <file_info>
-    <file device="EP4CGX30CF23C6" path="ArquiteturaMIPS.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CGX15BF14C6" path="ArquiteturaMIPS.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

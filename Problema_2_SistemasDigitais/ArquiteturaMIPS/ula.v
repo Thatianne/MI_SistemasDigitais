@@ -30,7 +30,7 @@ begin
 		end
 		Or:
 		begin
-			or(resultado, operador1, operador2);
+			resultado = operador1 | operador2;
 		end
 		Equal:
 		begin
@@ -60,16 +60,14 @@ begin
 		end
 		And:
 		begin
-			and(resultado, operador1, operador2);
-		end	
+			resultado = operador1 & operador2;
+		end
+	
 	endcase
-end
-
-
-
-if(resultado == 32'd0)
-begin
-	isZero = 1;
+	
+	if(resultado == 32'd0)
+		isZero = 1;
+	
 end
 
 endmodule

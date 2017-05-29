@@ -1,0 +1,6 @@
+module mux2_1_5(
+	input[4:0] opZero,
+	input[4:0] opUm,
+	input op,
+	output[4:0] saida
+);

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ArquiteturaMIPS
-Sun May 28 23:25:20 2017
+Mon May 29 01:29:14 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,12 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -36,24 +41,24 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun May 28 23:25:20 2017          ;
+; Analysis & Synthesis Status        ; Successful - Mon May 29 01:29:14 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ArquiteturaMIPS                            ;
-; Top-level Entity Name              ; bancoRegistradores                         ;
+; Top-level Entity Name              ; forwarding_unit                            ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                  ;
-; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                  ;
-; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                  ;
-; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 16                                         ;
+;     Total combinational functions  ; 16                                         ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 26                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -62,7 +67,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; bancoRegistradores ; ArquiteturaMIPS    ;
+; Top-level entity name                                                      ; forwarding_unit    ; ArquiteturaMIPS    ;
 ; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,28 +159,100 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; forwarding_unit.v                ; yes             ; User Verilog HDL File  ; C:/Users/Thatianne/Documents/Faculdade/5ºSemestre/MI-SistemasDigitais/MI_SistemasDigitais/Problema_2_SistemasDigitais/ArquiteturaMIPS/forwarding_unit.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 26               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; always0~3        ;
+; Maximum fan-out          ; 2                ;
+; Total fan-out            ; 88               ;
+; Average fan-out          ; 1.29             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |forwarding_unit           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 26   ; 0            ; |forwarding_unit    ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun May 28 23:25:19 2017
+    Info: Processing started: Mon May 29 01:29:08 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ArquiteturaMIPS -c ArquiteturaMIPS
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file mux3_1_32.v
+    Info (12023): Found entity 1: mux3_1_32
 Info (12021): Found 1 design units, including 1 entities, in source file bancoregistradores.v
     Info (12023): Found entity 1: bancoRegistradores
-Error (10170): Verilog HDL syntax error at ula.v(33) near text "or";  expecting "end" File: C:/Users/Thatianne/Documents/Faculdade/5ºSemestre/MI-SistemasDigitais/MI_SistemasDigitais/Problema_2_SistemasDigitais/ArquiteturaMIPS/ula.v Line: 33
-Error (10170): Verilog HDL syntax error at ula.v(63) near text "and";  expecting "end" File: C:/Users/Thatianne/Documents/Faculdade/5ºSemestre/MI-SistemasDigitais/MI_SistemasDigitais/Problema_2_SistemasDigitais/ArquiteturaMIPS/ula.v Line: 63
-Error (10170): Verilog HDL syntax error at ula.v(70) near text "if";  expecting "endmodule" File: C:/Users/Thatianne/Documents/Faculdade/5ºSemestre/MI-SistemasDigitais/MI_SistemasDigitais/Problema_2_SistemasDigitais/ArquiteturaMIPS/ula.v Line: 70
-Error (10112): Ignored design unit "ula" at ula.v(1) due to previous errors File: C:/Users/Thatianne/Documents/Faculdade/5ºSemestre/MI-SistemasDigitais/MI_SistemasDigitais/Problema_2_SistemasDigitais/ArquiteturaMIPS/ula.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file ula.v
-Info (12021): Found 1 design units, including 1 entities, in source file ulaop.sv
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: ula
+Info (12021): Found 1 design units, including 1 entities, in source file ulaop.v
     Info (12023): Found entity 1: ulaOp
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 524 megabytes
-    Error: Processing ended: Sun May 28 23:25:25 2017
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_1_32.v
+    Info (12023): Found entity 1: mux2_1_32
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_1_5.v
+    Info (12023): Found entity 1: mux2_1_5
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_1_6.v
+    Info (12023): Found entity 1: mux2_1_6
+Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit.v
+    Info (12023): Found entity 1: forwarding_unit
+Info (12127): Elaborating entity "forwarding_unit" for the top level hierarchy
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 16 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 545 megabytes
+    Info: Processing ended: Mon May 29 01:29:14 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:02
 
 

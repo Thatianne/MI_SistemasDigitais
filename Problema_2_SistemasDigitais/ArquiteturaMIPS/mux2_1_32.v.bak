@@ -1,0 +1,5 @@
+module mux2_1_32(
+	input [31:0] opZero,
+	input [31:0] opUm,
+	
+);
