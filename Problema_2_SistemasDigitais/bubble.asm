@@ -4,6 +4,7 @@
 .text
 
 		addi $s0, $zero, 10 	#Tamanho do vetor
+		add $s2, $s0, $zero
 
 		move $s1, $zero		#Indice do loop externo
 

@@ -1,0 +1,29 @@
+Lista de funções usadas
+
+Tipo I (op)					Tipo J (op)					Tipo R (opx)
+addiu (001001)				j (000010)					addu (100001)
+lui (001111)											slt (101010)
+ori	(001101)											add (100000)
+lw	(100011)											mul (011000)
+beq	(000100)											div (011010)
+sw	(101011)											mfhi (010000)
+bne (000101)
+
+
+Campos dos tipos de instruções
+
+Tipo I 						Tipo J 						Tipo R
+6 bits op					6 bits op					6 bits op (000000)
+5 bits reg1					26 bits imediato			5 bits reg1
+5 bits reg2												5 bits reg2
+16 bits imediato										5 bits reg3
+														11 bits opx (os últimos 6 são da função)
+
+Funções correspondentes
+
+-add 		-sub			-or 			-equal			-less			-mult			-div		-and
+addiu						ori				bne				slt				mul 			div
+addu 										beq								lui
+lw
+sw
+mhif
